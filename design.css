@@ -1,0 +1,153 @@
+html,
+body {
+  margin: 0;
+  font-family: arial;
+}
+
+.flex {
+  display: flex;
+}
+.j-c-c {
+  display: flex;
+  justify-content: center;
+}
+
+.fixed {
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.grey-bar {
+  background-color: #222221;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  width: auto;
+  position: fixed;
+  width: 100%;
+}
+.logo {
+  height: 20px;
+  margin-right: 40px;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  align-items: center;
+}
+.category-choice {
+  margin-left: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+.icons {
+  width: 25px;
+  margin-left: 16px;
+  margin-right: 10px;
+}
+.right-menu {
+  display: flex;
+  align-items: center;
+}
+.search {
+  background-color: transparent;
+  width: 240px;
+  border-width: 0 0 1px 0;
+  padding-bottom: 4px;
+  font-size: 14px;
+}
+.info-product {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+}
+.category-product {
+  padding-top: 150px;
+
+  flex-direction: column;
+}
+.category-product h2 {
+  font-size: 16px;
+}
+.info-product {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+.settings-choice {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  border: none;
+  background-color: white;
+  color: grey;
+  font-size: 14px;
+}
+.m-r-16 {
+  margin-right: 16px;
+}
+.width-36 {
+  width: 36px;
+}
+.number-of-goods p {
+  color: grey;
+  margin-left: 16px;
+  font-size: 14px;
+}
+.unit-of-goods-img {
+  width: 280px;
+}
+.unit-of-goods {
+  padding: 20px 0;
+}
+
+.unit-of-goods p {
+  color: grey;
+  font-size: 16px;
+}
+.unit-of-goods span {
+  color: green;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.m-l-10 {
+  margin-left: 10px;
+}
+.goods {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.info-shop {
+  color: grey;
+  margin-top: 30px;
+  padding-bottom: 120px;
+}
+
+.bottom-bar {
+  background-color: rgb(221, 217, 217);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  bottom: 0;
+  width: auto;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+}
+.footer-info {
+  align-items: center;
+  color: rgb(109, 109, 109);
+  font-size: 12px;
+}
+
+.tel p {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+}
