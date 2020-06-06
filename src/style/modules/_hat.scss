@@ -1,0 +1,10 @@
+.hat {
+  height: 100vh;
+  display: flex;
+  align-items: center; 
+  &__title {
+    color: #fff;
+    padding: 20px;
+    background: linear-gradient(90deg, rgb(240, 110, 212), rgb(104, 104, 252))
+  }
+}

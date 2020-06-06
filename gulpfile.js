@@ -36,7 +36,7 @@ var path = {
   src: {
     html: "src/*.html",
     js: "src/js/main.js",
-    style: "src/style/*.sass",
+    style: "src/style/*.scss",
     img: "src/img/**/*.*",
     fonts: "src/fonts/**/*.*",
     webfonts: "src/webfonts/**/*.*",
@@ -44,7 +44,7 @@ var path = {
   watch: {
     html: "src/**/*.html", // PUG or HTML file here
     js: "src/js/**/*.js",
-    style: "src/style/**/*.sass",
+    style: "src/style/**/*.scss",
     img: "src/img/**/*.*",
     fonts: "src/fonts/**/*.*",
   },

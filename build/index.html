@@ -10,10 +10,24 @@
 </head>
 
 <body>
-  <button>Я люблю Сашу</button>
-  <button>Я люблю Сашу</button>
-  <button>Я люблю Сашу</button>
-  <button>Я люблю Сашу</button>
+  <!-- 
+      .hat – класс модуля, который находится в /style/modules/_hat.scss
+  
+      .container – создает контейнер, который будет ограничивать 
+        ширину контента в зависимости от ширины экрана устройства
+      .l-content – обозначает новую группу внутри контейнера. Элементы необходимо располагать в нем
+     -->
+  
+  <div class="hat">
+    <div class="container">
+      <div class="l-content">
+        <h1 class="hat__title">Стилизованный заголовок</h1>
+        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Большой, сих раз выйти своего свое заглавных текста семь приставка.</p>
+        <button>Кнопка</button>
+      </div>
+    </div>
+  </div>
+
   <div class="container l-wrapper">
     <p style="font-size: .8rem; align-self: flex-start; border-right: 1px solid #222  " class="tac">auto</p>
 
