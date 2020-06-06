@@ -1,10 +1,48 @@
 .hat {
   height: 100vh;
   display: flex;
-  align-items: center; 
-  &__title {
-    color: #fff;
-    padding: 20px;
-    background: linear-gradient(90deg, rgb(240, 110, 212), rgb(104, 104, 252))
+  color: white;
+  background: url(/Users/dasha/Documents/Code/superhorse/src/img/background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+
+  &__logo {
+    padding-top: 20px;
   }
+
+  &__title {
+    font-size: 72px;
+    position: relative;
+    //padding-left: 20px;
+    line-height: 70%;
+
+    &-pre {
+      font-weight: normal;
+      font-size: 36px;
+    }
+    &-post {
+      font-weight: normal;
+      font-size: 24px;
+    }
+  }
+  &__title::before {
+    content: "|";
+    position: absolute;
+    left: -32px;
+    top: 80px;
+    font-size: 96px;
+    font-weight: 600px;
+  }
+}
+
+.buttom {
+  border: none;
+  font-size: 18px;
+  padding: 16px 28px;
+}
+
+.flex {
+  display: flex;
 }
