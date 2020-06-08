@@ -28,21 +28,33 @@
     }
   }
   &__title::before {
-    content: "|";
+    content: "";
+    display: block;
     position: absolute;
     left: -32px;
-    top: 80px;
+    top: 64px;
     font-size: 96px;
-    font-weight: 600px;
+    background: white;
+    height: 116px;
+    width: 8px;
   }
-}
 
-.buttom {
-  border: none;
-  font-size: 18px;
-  padding: 16px 28px;
-}
+  &__tel-wrapper {
+    margin-bottom: 30px;
+  }
 
-.flex {
-  display: flex;
+  &__tel {
+    font-size: 18px;
+    margin: 10px 28px;
+  }
+
+  &__menu {
+    padding: 48px 4px;
+    margin-left: auto;
+    &-item {
+      text-decoration: none;
+      margin: auto 20px;
+      font-size: 18px;
+    }
+  }
 }

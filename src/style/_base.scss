@@ -74,19 +74,22 @@ p {
   text-align: center;
 }
 
-/*.button {
-  display: inline-block;
-  margin-top: 10px;
-  background: linear-gradient(45deg, #00C9FF, #92FE9D);
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  border-radius: 10px;
-  transition: .25s ease;
-  padding: 10px 20px;
-  
-  &:hover {
-    opacity: .75
-  }
-} */
+.spacer {
+  flex-grow: 1;
+}
+
+.buttom {
+  border: none;
+  font-size: 18px;
+  padding: 16px 28px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.flex {
+  display: flex;
+}
