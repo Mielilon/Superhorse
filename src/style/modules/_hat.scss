@@ -2,7 +2,7 @@
   height: 100vh;
   display: flex;
   color: white;
-  background: url(/Users/dasha/Documents/Code/superhorse/src/img/background.png);
+  background: url(/Users/dasha/Documents/Code/superhorse/build/img/background.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -15,7 +15,6 @@
   &__title {
     font-size: 72px;
     position: relative;
-    //padding-left: 20px;
     line-height: 70%;
 
     &-pre {

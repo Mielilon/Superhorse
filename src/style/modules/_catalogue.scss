@@ -1,1 +1,49 @@
+.catalogue {
+  height: 100vh;
+  display: flex;
 
+  &__goods {
+    flex-wrap: wrap;
+  }
+
+  .goods-item {
+    max-width: 386px;
+    &__img {
+      max-width: 148px;
+    }
+
+    &__change {
+      color: white;
+      background-color: #fa4c4c;
+      font-weight: bold;
+      font-size: 11px;
+      padding: 2px 8px;
+      max-width: 124px;
+      text-align: center;
+      border-radius: 4px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      line-height: 120%;
+    }
+
+    &__head {
+      font-weight: normal;
+      font-size: 18px;
+      margin-top: 8px;
+    }
+
+    &__price {
+      font-weight: bold;
+    }
+
+    &__volume {
+      color: #828ca7;
+      margin-left: 8px;
+    }
+    &__description {
+      color: #828ca7;
+      max-width: 215px;
+      font-size: 14px;
+    }
+  }
+}

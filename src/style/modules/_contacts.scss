@@ -1,0 +1,43 @@
+.contacts {
+  height: 100vh;
+  display: flex;
+
+  &__description {
+    font-weight: bold;
+    color: #111111;
+  }
+
+  &__info {
+    margin-left: 80px;
+  }
+
+  &__form-input::placeholder {
+    color: #d8dbe2;
+    font-size: 18px;
+  }
+}
+
+.number {
+  font-size: 24px;
+  color: #828ca7;
+}
+
+.contacts__form {
+  margin-bottom: 40px;
+  &-input {
+    border: none;
+    border-bottom: 1px solid #99a1b6;
+    font-weight: 18px;
+    width: 240px;
+    padding: 6px;
+    margin-top: 32px;
+  }
+}
+.button-black {
+  background-color: black;
+  color: white;
+}
+
+.info-news {
+  margin-left: 60px;
+}
