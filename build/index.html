@@ -7,10 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
-  <div class="hat">
+  <div class="hat" id="home">
     <div class="container">
       <div class="content">
         <img class="hat__logo" src="./img/Logo.png" alt="Логотип">
@@ -24,21 +25,21 @@
         </h1>
         <div class="hat__tel-wrapper flex">
           <button class="button">Обратный звонок</button>
-          <p class="hat__tel">+7 (964) 935-85-24</p>
+          <a class="hat__tel" href="tel: +7 (964) 935-85-24">+7 (964) 935-85-24</a>
         </div>
-        <div class="hat__menu">
-          <a class="hat__menu-item" href="#">Главная</a>
-          <a class="hat__menu-item" href="#">Каталог</a>
-          <a class="hat__menu-item" href="#">Как сделать заказ</a>
-          <a class="hat__menu-item" href="#">Дилеры</a>
-          <a class="hat__menu-item" href="#">Контакты</a>
-        </div>
+        <nav class="hat__menu">
+          <a class="hat__menu-item" href="#home">Главная</a>
+          <a class="hat__menu-item" href="#catalog">Каталог</a>
+          <a class="hat__menu-item" href="#order">Как сделать заказ</a>
+          <a class="hat__menu-item" href="#dealers">Дилеры</a>
+          <a class="hat__menu-item" href="#contacts">Контакты</a>
+        </nav>
       </div>
     </div>
   </div>
   </div>
-  <div class=catalogue>
-      <div class="container">
+  <div class=catalogue id="catalog">
+      <div class="container m-t-60">
           <div class="content">
               <h2 class="title">Каталог</h2>
               <div class="catalogue__goods">
@@ -47,22 +48,152 @@
                       <div class="goods-item__info">
                           <p class="goods-item__change">Выбор клиентов</p>
                           <h4 class="goods-item__head">DERMALACTIS Iodine Dip</h4>
-                          <span class="flex">
+                          <span class=" m-t--20 flex">
                               <p class="goods-item__price">950р</p>
                               <p class="goods-item__volume">5л</p>
                           </span>
-                          <p class="goods-item__description">Сбалансированная витаминно&#8209;минеральная добавка для
+                          <p class="goods-item__description">Сбалансированная витаминно-минеральная добавка для
                               холостых,
-                              жерёбых кобыл и жеребят после отъёма.</p>
+                              жерёбых
+                              кобыл и жеребят после
+                              отъёма.</p>
+                      </div>
+                  </div>
+                  <div class="goods__item flex">
+                      <img class="goods-item__img" src="./img/good.png" alt="Единица товара">
+                      <div class="goods-item__info">
+                          <p class="goods-item__change">Выбор клиентов</p>
+                          <h4 class="goods-item__head">DERMALACTIS Iodine Dip</h4>
+                          <span class=" m-t--20 flex">
+                              <p class="goods-item__price">950р</p>
+                              <p class="goods-item__volume">5л</p>
+                          </span>
+                          <p class="goods-item__description">Сбалансированная витаминно-минеральная добавка для
+                              холостых,
+                              жерёбых
+                              кобыл и жеребят после
+                              отъёма.</p>
+                      </div>
+                  </div>
+                  <div class="goods__item flex">
+                      <img class="goods-item__img" src="./img/good.png" alt="Единица товара">
+                      <div class="goods-item__info">
+                          <p class="goods-item__change">Выбор клиентов</p>
+                          <h4 class="goods-item__head">DERMALACTIS Iodine Dip</h4>
+                          <span class=" m-t--20 flex">
+                              <p class="goods-item__price">950р</p>
+                              <p class="goods-item__volume">5л</p>
+                          </span>
+                          <p class="goods-item__description">Сбалансированная витаминно-минеральная добавка для
+                              холостых,
+                              жерёбых
+                              кобыл и жеребят после
+                              отъёма.</p>
+                      </div>
+                  </div>
+                  <div class="goods__item flex">
+                      <img class="goods-item__img" src="./img/good.png" alt="Единица товара">
+                      <div class="goods-item__info">
+                          <p class="goods-item__change">Выбор клиентов</p>
+                          <h4 class="goods-item__head">DERMALACTIS Iodine Dip</h4>
+                          <span class=" m-t--20 flex">
+                              <p class="goods-item__price">950р</p>
+                              <p class="goods-item__volume">5л</p>
+                          </span>
+                          <p class="goods-item__description">Сбалансированная витаминно-минеральная добавка для
+                              холостых,
+                              жерёбых
+                              кобыл и жеребят после
+                              отъёма.</p>
+                      </div>
+                  </div>
+                  <div class="goods__item flex">
+                      <img class="goods-item__img" src="./img/good.png" alt="Единица товара">
+                      <div class="goods-item__info">
+                          <p class="goods-item__change">Выбор клиентов</p>
+                          <h4 class="goods-item__head">DERMALACTIS Iodine Dip</h4>
+                          <span class=" m-t--20 flex">
+                              <p class="goods-item__price">950р</p>
+                              <p class="goods-item__volume">5л</p>
+                          </span>
+                          <p class="goods-item__description">Сбалансированная витаминно-минеральная добавка для
+                              холостых,
+                              жерёбых
+                              кобыл и жеребят после
+                              отъёма.</p>
+                      </div>
+                  </div>
+                  <div class="goods__item flex">
+                      <img class="goods-item__img" src="./img/good.png" alt="Единица товара">
+                      <div class="goods-item__info">
+                          <p class="goods-item__change">Выбор клиентов</p>
+                          <h4 class="goods-item__head">DERMALACTIS Iodine Dip</h4>
+                          <span class=" m-t--20 flex">
+                              <p class="goods-item__price">950р</p>
+                              <p class="goods-item__volume">5л</p>
+                          </span>
+                          <p class="goods-item__description">Сбалансированная витаминно-минеральная добавка для
+                              холостых,
+                              жерёбых
+                              кобыл и жеребят после
+                              отъёма.</p>
+                      </div>
+                  </div>
+                  <div class="goods__item flex">
+                      <img class="goods-item__img" src="./img/good.png" alt="Единица товара">
+                      <div class="goods-item__info">
+                          <p class="goods-item__change">Выбор клиентов</p>
+                          <h4 class="goods-item__head">DERMALACTIS Iodine Dip</h4>
+                          <span class=" m-t--20 flex">
+                              <p class="goods-item__price">950р</p>
+                              <p class="goods-item__volume">5л</p>
+                          </span>
+                          <p class="goods-item__description">Сбалансированная витаминно-минеральная добавка для
+                              холостых,
+                              жерёбых
+                              кобыл и жеребят после
+                              отъёма.</p>
+                      </div>
+                  </div>
+                  <div class="goods__item flex">
+                      <img class="goods-item__img" src="./img/good.png" alt="Единица товара">
+                      <div class="goods-item__info">
+                          <p class="goods-item__change">Выбор клиентов</p>
+                          <h4 class="goods-item__head">DERMALACTIS Iodine Dip</h4>
+                          <span class=" m-t--20 flex">
+                              <p class="goods-item__price">950р</p>
+                              <p class="goods-item__volume">5л</p>
+                          </span>
+                          <p class="goods-item__description">Сбалансированная витаминно-минеральная добавка для
+                              холостых,
+                              жерёбых
+                              кобыл и жеребят после
+                              отъёма.</p>
+                      </div>
+                  </div>
+                  <div class="goods__item flex">
+                      <img class="goods-item__img" src="./img/good.png" alt="Единица товара">
+                      <div class="goods-item__info">
+                          <p class="goods-item__change">Выбор клиентов</p>
+                          <h4 class="goods-item__head">DERMALACTIS Iodine Dip</h4>
+                          <span class=" m-t--20 flex">
+                              <p class="goods-item__price">950р</p>
+                              <p class="goods-item__volume">5л</p>
+                          </span>
+                          <p class="goods-item__description">Сбалансированная витаминно-минеральная добавка для
+                              холостых,
+                              жерёбых
+                              кобыл и жеребят после
+                              отъёма.</p>
                       </div>
                   </div>
               </div>
           </div>
       </div>
   </div>
-  <div class="order">
+  <div class="order" id="order">
       <div class="container">
-          <div class="content">
+          <div class="content m-t-60">
               <div class="content-position">
                   <div class="order-info">
                       <h2 class="order-title">Как сделать заказ?</h2>
@@ -83,9 +214,9 @@
           </div>
       </div>
   </div>
-  <div class="contacts">
+  <div class="contacts" id="contacts">
       <div class="container">
-          <div class="content">
+          <div class="content m-t-60">
               <h2 class="title">Контакты</h2>
               <div class="flex">
                   <img class="contacts__img" src="./img/cow-2.png" alt="Изображение коровы">
@@ -93,7 +224,7 @@
                       <div class="flex">
                           <div class="info-number">
                               <p class="contacts__description">Звоните нам:</p>
-                              <p class="number">+7 (964) 935-85-24</p>
+                              <a class="number" href="tel: +7 (964) 935-85-24">+7 (964) 935-85-24</a>
                           </div>
                           <div class="info-news">
                               <p class="contacts__description">Следите за новостями:</p>
@@ -106,14 +237,13 @@
                           </div>
                       </div>
                       <div class="contacts__form">
-                          <p class="contacts__description">Предварительный заказ:</p>
-                          <input class="contacts__form-input" type="text" name="name" id="name"
-                              placeholder="Александр"><br>
+                          <p class="contacts__description m-t-48">Предварительный заказ:</p>
+                          <input class="contacts__form-input" type="text" name="name" id="name" placeholder="Имя"><br>
                           <input class="contacts__form-input" type="email" name="email" id="email" placeholder="Email">
                           <input class="contacts__form-input m-l-24" type="text" name="number" id="number"
                               placeholder="+7 (___) -___-__-__"><br>
-                          <input class="contacts__form-input" type="text" name="comment" id="comment"
-                              placeholder="Комментарий">
+                          <input class="contacts__form-input contacts__form-comment" type="text" name="comment"
+                              id="comment" placeholder="Комментарий">
                       </div>
                       <button class="button button-black" onclick="">Отправить</button>
                   </div>
@@ -127,7 +257,7 @@
               <div class="flex">
                   <img class="footer__logo" src="./img/Logo.png" alt="Логотип">
                   <div class="footer__dealers">
-                      <h4 class="dealers__header">Дилеры</h4>
+                      <h4 class="dealers__header" id="dealers">Дилеры</h4>
                       <div class="dealers__wrapper flex">
                           <div class="dealers__column">
                               <p class="grey-text">Сибирский округ</p>

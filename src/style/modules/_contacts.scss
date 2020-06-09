@@ -10,16 +10,12 @@
   &__info {
     margin-left: 80px;
   }
-
-  &__form-input::placeholder {
-    color: #d8dbe2;
-    font-size: 18px;
-  }
 }
 
 .number {
   font-size: 24px;
   color: #828ca7;
+  text-decoration: none;
 }
 
 .contacts__form {
@@ -31,11 +27,31 @@
     width: 240px;
     padding: 6px;
     margin-top: 32px;
+    color: #828ca7;
+    font-size: 18px;
+  }
+
+  &-input::placeholder {
+    color: #d8dbe2;
+    font-size: 18px;
+  }
+
+  &-comment {
+    width: 100%;
   }
 }
 .button-black {
   background-color: black;
+  border: 1px solid black;
   color: white;
+  transition: 0.3s;
+  transform: scale(1);
+}
+
+.button-black:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
 }
 
 .info-news {

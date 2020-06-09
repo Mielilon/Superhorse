@@ -3,13 +3,17 @@
   display: flex;
 
   &__goods {
+    display: flex;
     flex-wrap: wrap;
+    // margin: -32px;
+    margin-top: 37px;
   }
 
   .goods-item {
-    max-width: 386px;
+    //margin-top: 100px;
+
     &__img {
-      max-width: 148px;
+      //max-width: 148px;
     }
 
     &__change {
@@ -18,7 +22,7 @@
       font-weight: bold;
       font-size: 11px;
       padding: 2px 8px;
-      max-width: 124px;
+      display: inline;
       text-align: center;
       border-radius: 4px;
       letter-spacing: 0.1em;
@@ -44,6 +48,11 @@
       color: #828ca7;
       max-width: 215px;
       font-size: 14px;
+      margin: 0;
     }
   }
+}
+
+.m-t--20 {
+  margin-top: -20px;
 }
