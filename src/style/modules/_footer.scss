@@ -1,0 +1,46 @@
+.footer {
+  border-top: 1px solid #d8dbe2;
+  margin-top: 160px;
+  padding-top: 40px;
+
+  &__logo {
+    width: 165px;
+    height: 80px;
+    justify-content: flex-end;
+  }
+
+  &__dealers {
+    margin-left: 65px;
+    .dealers__header {
+      font-weight: bold;
+      font-size: 16px;
+      color: #828ca7;
+      margin-left: 40px;
+      margin-top: 0;
+    }
+    .dealers__column {
+      margin-left: 40px;
+    }
+    .dealers__wrapper {
+      margin-top: -10px;
+    }
+  }
+  &__info {
+    margin-top: 78px;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.grey-text {
+  font-size: 16px;
+  text-decoration-line: underline;
+  color: #828ca7;
+}
+
+.date {
+  font-size: 16px;
+  color: #828ca7;
+}
