@@ -1,19 +1,21 @@
 .catalogue {
-  height: 100vh;
   display: flex;
 
   &__goods {
     display: flex;
     flex-wrap: wrap;
-    // margin: -32px;
-    margin-top: 37px;
+    margin: 32px 20px -40px;
   }
-
+  //Стили для единицы товара
   .goods-item {
-    //margin-top: 100px;
+    margin: 20px 16px;
+    flex: 1;
+    align-items: flex-start;
+    cursor: pointer;
 
     &__img {
-      //max-width: 148px;
+      width: 150px;
+      margin-right: 12px;
     }
 
     &__change {
@@ -55,4 +57,144 @@
 
 .m-t--20 {
   margin-top: -20px;
+}
+//Стили для модального окна
+.modal-window {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  top: 0;
+  left: 0;
+
+  &__product {
+    align-items: flex-start;
+  }
+  &__body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+  &__content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 40px 40px 60px;
+    position: relative;
+  }
+
+  &__close {
+    position: absolute;
+    top: 26px;
+    right: 16px;
+    width: 14px;
+  }
+
+  &__change {
+    color: white;
+    background-color: #fa4c4c;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 2px 8px;
+    display: inline;
+    text-align: center;
+    border-radius: 4px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 120%;
+  }
+  &__img {
+    width: 150px;
+    margin-right: 12px;
+  }
+  &__head {
+    font-weight: normal;
+    font-size: 32px;
+    margin-top: 8px;
+  }
+
+  &__price {
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  &__volume {
+    color: #828ca7;
+    margin-left: 12px;
+    font-size: 24px;
+  }
+  &__description {
+    color: #828ca7;
+    max-width: 455px;
+    margin: 0;
+  }
+  &__menu {
+    margin-top: 30px;
+
+    &-item {
+      font-size: 18px;
+      color: #99a1b6;
+      margin-right: 32px;
+      cursor: pointer;
+
+      &__select {
+        color: black;
+        font-weight: bold;
+      }
+      &__info {
+        padding: 0 40px;
+        margin-top: 32px;
+        width: 350px;
+      }
+    }
+  }
+  &__bottom {
+    border-top: 1px solid #d8dbe2;
+    margin: 0 -40px;
+  }
+}
+
+.button.button-black.button-little {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.download {
+  color: red;
+  text-decoration: none;
+  margin-left: 32px;
+  cursor: pointer;
+}
+
+.wrapper-button {
+  margin-top: 24px;
+}
+
+.little-text {
+  font-size: 12px;
+  color: #99a1b6;
+  margin-top: 12px;
+}
+
+.menu-item__info-title {
+  font-size: 14px;
+  color: #828ca7;
+  font-weight: bold;
+}
+
+.menu-item__info {
+  font-size: 14px;
+}
+
+.wrapper_menu-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close {
+  overflow: hidden;
+  opacity: 0;
+  z-index: -50;
 }

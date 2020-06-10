@@ -20,13 +20,14 @@
     }
     .dealers__column {
       margin-left: 40px;
+      display: inline-block;
     }
     .dealers__wrapper {
       margin-top: -10px;
     }
   }
   &__info {
-    margin-top: 78px;
+    margin-top: 58px;
     align-items: center;
     margin-bottom: 40px;
     width: 100%;
@@ -36,8 +37,8 @@
 
 .grey-text {
   font-size: 16px;
-  text-decoration-line: underline;
   color: #828ca7;
+  display: inherit;
 }
 
 .date {
