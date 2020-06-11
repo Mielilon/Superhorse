@@ -1,10 +1,11 @@
 .content-position {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .order {
-  margin-top: 140px;
+  margin-top: 120px;
   &-info {
     margin-right: 80px;
   }
@@ -18,5 +19,38 @@
     font-size: 18px;
     line-height: 150%;
     color: #111111;
+  }
+  @media (max-width: 1200px) {
+    &-info {
+      margin-right: 60px;
+    }
+    .cow-1 {
+      width: 400px;
+    }
+  }
+  @media (max-width: 993px) {
+    &-info {
+      margin: 0 auto;
+    }
+    .cow-1 {
+      width: 100%;
+      padding: 30px;
+    }
+    .content-position {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 576px) {
+    &-info {
+      margin: 0 auto;
+    }
+    &-title {
+      font-size: 38px;
+    }
+    .cow-1 {
+      width: 100%;
+      padding: 30px 0 0 0;
+    }
   }
 }

@@ -4,7 +4,7 @@
   &__goods {
     display: flex;
     flex-wrap: wrap;
-    margin: 32px 20px -40px;
+    margin: 32px -20px -40px;
   }
   //Стили для единицы товара
   .goods-item {
@@ -14,7 +14,7 @@
     cursor: pointer;
 
     &__img {
-      width: 150px;
+      width: 160px;
       margin-right: 12px;
     }
 
@@ -94,13 +94,11 @@
         margin-right: 14px;
       }
       &__head {
-        font-weight: normal;
         font-size: 20px;
         margin-top: 6px;
       }
 
       &__price {
-        font-weight: bold;
         font-size: 18px;
       }
 
@@ -110,8 +108,6 @@
         font-size: 18px;
       }
       &__description {
-        color: #828ca7;
-        max-width: 215px;
         font-size: 16px;
         margin: 0;
       }

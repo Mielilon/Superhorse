@@ -6,7 +6,6 @@
   &__logo {
     width: 165px;
     height: 80px;
-    justify-content: flex-end;
   }
 
   &__dealers {
@@ -17,10 +16,6 @@
       color: #828ca7;
       margin-left: 40px;
       margin-top: 0;
-    }
-    .dealers__column {
-      margin-left: 40px;
-      display: inline-block;
     }
     .dealers__wrapper {
       margin-top: -10px;
@@ -33,15 +28,59 @@
     width: 100%;
     justify-content: space-between;
   }
+  @media (max-width: 1200px) {
+    .dealers__wrapper {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+    }
+  }
+  @media (max-width: 993px) {
+    .grey-text {
+      margin-left: 0;
+    }
+    .dealers__header {
+      margin-left: 0;
+    }
+  }
+  @media (max-width: 768px) {
+    .dealers__wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 6px;
+    }
+  }
+  @media (max-width: 576px) {
+    .col {
+      flex-direction: column;
+    }
+    &__dealers {
+      margin: 20px;
+    }
+    &__info {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 20px;
+    }
+  }
 }
 
 .grey-text {
   font-size: 16px;
   color: #828ca7;
   display: inherit;
+  margin-left: 40px;
 }
 
 .date {
   font-size: 16px;
   color: #828ca7;
+}
+
+.dealers__wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
 }
