@@ -7,8 +7,14 @@ html {
   margin: 0px;
   color: #222;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
-
+@media (max-width: 319px) {
+  body,
+  html {
+    overflow-x: scroll;
+  }
+}
 * {
   box-sizing: border-box;
 }
