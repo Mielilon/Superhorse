@@ -1,0 +1,22 @@
+.article {
+  padding-top: 60px;
+  .content {
+    max-width: 760px;
+    margin: auto;
+    p,
+    li {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    h5 {
+      color: #828da7;
+      margin-top: 0;
+      font-size: 20px;
+      font-weight: 400;
+    }
+    h1 {
+      margin: 8px 0;
+    }
+  }
+}

@@ -1,18 +1,36 @@
-<div class=catalogue id="catalog">
-    <div class="container m-t-60">
-        <div class="content">
-            <h2 class="title">Каталог</h2>
-            <div class="catalogue__goods">
-                //= products/product.html
-                //= products/product.html
-                //= products/product.html
-                //= products/product.html
-                //= products/product.html
-                //= products/product.html
-                //= products/product.html
-                //= products/product.html
-                //= products/product.html
-            </div>
+<div class="catalogue" id="catalog">
+  <div class="container m-t-60">
+    <div class="content">
+      <h2 class="title">Каталог</h2>
+      <div class="catalogue__goods" style="visibility: hidden;">
+        <div
+          class="goods-item flex"
+          v-for="(product, id) in productsData"
+          :key="id"
+          @click="showProductModal(id)"
+        >
+          <img
+            class="goods-item__img"
+            :src="`./img/products/${id}-1.jpg`"
+            alt="Единица товара"
+          />
+          <div class="goods-item__info">
+            <p class="goods-item__change" v-if="product.isHot">
+              Выбор клиентов
+            </p>
+            <p class="goods-item__head" v-text="product.title"></p>
+            <span class="m-t--20 flex">
+              <p class="goods-item__price" v-text="product.price + 'р.'"></p>
+              <p
+                class="goods-item__volume"
+                v-if="product.options"
+                v-text="product.options[0].name"
+              ></p>
+            </span>
+            <p class="goods-item__description" v-text="product.desc"></p>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
