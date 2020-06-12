@@ -96,19 +96,12 @@
           v-text="activeProduct.components.analytical.title"
         ></p>
         <div>
-          <div class="wrapper_menu-items">
-            <p
-              class="menu-item__info"
-              v-for="item in activeProduct.components.analytical.list"
-              v-text="item[0]"
-            ></p>
-          </div>
-          <div class="wrapper_menu-items">
-            <p
-              class="menu-item__info"
-              v-for="item in activeProduct.components.analytical.list"
-              v-text="item[1]"
-            ></p>
+          <div
+            class="wrapper_menu-items"
+            v-for="item in activeProduct.components.analytical.list"
+          >
+            <p class="menu-item__info" v-text="item[0]"></p>
+            <p class="menu-item__info" v-text="item[1]"></p>
           </div>
         </div>
       </div>
