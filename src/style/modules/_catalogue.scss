@@ -150,6 +150,12 @@
   height: calc(100vh + 20px);
   align-items: flex-start;
 
+  &-wrapper {
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
   &.active {
     display: flex;
   }
@@ -167,10 +173,11 @@
     max-width: 680px;
     overflow: scroll;
     margin: auto;
-    max-height: 100%;
+    max-height: calc(100vh - 80px);
   }
 
   &__close {
+    z-index: 50;
     position: absolute;
     top: 26px;
     right: 16px;
@@ -257,6 +264,9 @@
     }
     .little-text {
       margin-top: 32px;
+    }
+    &__close {
+      top: 46px;
     }
   }
   @media (max-width: 645px) {

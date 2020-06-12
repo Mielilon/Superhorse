@@ -2,128 +2,130 @@
   id="modal-window"
   class="modal-window"
   :class="{active: isProductModalActive}"
-  @click.self="closeProductModal "
+  @click.self="closeProductModal"
 >
-  <div class="modal-window__content" v-if="selectedProductId">
+  <div class="modal-window-wrapper" v-if="selectedProductId">
     <img
       @click="closeProductModal"
       class="modal-window__close"
       src="./img/close.png"
       alt="Закрыть"
     />
-    <div class="flex modal-window__product">
-      <img
-        class="modal-window__img"
-        :src="`./img/products/${activeProduct.id}-1.jpg`"
-        alt="Единица товара"
-      />
-      <div class="modal-window__info-wrapper">
-        <div class="modal-window__info">
-          <p class="modal-window__change" v-if="activeProduct.isHot">
-            Выбор клиентов
+    <div class="modal-window__content">
+      <div class="flex modal-window__product">
+        <img
+          class="modal-window__img"
+          :src="`./img/products/${activeProduct.id}-1.jpg`"
+          alt="Единица товара"
+        />
+        <div class="modal-window__info-wrapper">
+          <div class="modal-window__info">
+            <p class="modal-window__change" v-if="activeProduct.isHot">
+              Выбор клиентов
+            </p>
+            <h4 class="modal-window__head" v-text="activeProduct.title"></h4>
+            <span class="m-t--20 flex">
+              <p
+                class="modal-window__price"
+                v-text="activeProduct.price + 'р.'"
+              ></p>
+              <p
+                class="modal-window__volume"
+                v-if="activeProduct.options"
+                v-text="activeProduct.options[0].name"
+              ></p>
+            </span>
+            <p
+              class="modal-window__description"
+              v-text="activeProduct.longDesc"
+            ></p>
+          </div>
+          <div class="wrapper-button">
+            <a
+              href="#contacts"
+              @click="closeProductModal"
+              class="button button-black button-little"
+            >
+              Предварительный заказ
+            </a>
+            <a
+              class="download tac"
+              :href="`/pdf/${activeProduct.pdf}.pdf`"
+              target="_blank"
+              >Скачать PDF</a
+            >
+          </div>
+          <p class="little-text">
+            Условия доставки, скидки и бонусы обсуждаются индивидуально
           </p>
-          <h4 class="modal-window__head" v-text="activeProduct.title"></h4>
-          <span class="m-t--20 flex">
-            <p
-              class="modal-window__price"
-              v-text="activeProduct.price + 'р.'"
-            ></p>
-            <p
-              class="modal-window__volume"
-              v-if="activeProduct.options"
-              v-text="activeProduct.options[0].name"
-            ></p>
-          </span>
-          <p
-            class="modal-window__description"
-            v-text="activeProduct.longDesc"
-          ></p>
         </div>
-        <div class="wrapper-button">
-          <a
-            href="#contacts"
-            @click="closeProductModal"
-            class="button button-black button-little"
-          >
-            Предварительный заказ
-          </a>
-          <a
-            class="download tac"
-            :href="`/pdf/${activeProduct.pdf}.pdf`"
-            target="_blank"
-            >Скачать PDF</a
-          >
-        </div>
-        <p class="little-text">
-          Условия доставки, скидки и бонусы обсуждаются индивидуально
+      </div>
+      <div class="flex modal-window__menu">
+        <p
+          class="modal-window__menu-item"
+          :class="{active: activeTab === 0}"
+          @click="selectTab(0)"
+        >
+          Компоненты
+        </p>
+        <p
+          class="modal-window__menu-item"
+          :class="{active: activeTab === 1}"
+          @click="selectTab(1)"
+        >
+          Ингредиенты
+        </p>
+        <p
+          class="modal-window__menu-item"
+          :class="{active: activeTab === 2}"
+          @click="selectTab(2)"
+        >
+          Примечание
+        </p>
+        <p
+          class="modal-window__menu-item"
+          :class="{active: activeTab === 3}"
+          @click="selectTab(3)"
+        >
+          Рекомендации
         </p>
       </div>
-    </div>
-    <div class="flex modal-window__menu">
-      <p
-        class="modal-window__menu-item"
-        :class="{active: activeTab === 0}"
-        @click="selectTab(0)"
-      >
-        Компоненты
-      </p>
-      <p
-        class="modal-window__menu-item"
-        :class="{active: activeTab === 1}"
-        @click="selectTab(1)"
-      >
-        Ингредиенты
-      </p>
-      <p
-        class="modal-window__menu-item"
-        :class="{active: activeTab === 2}"
-        @click="selectTab(2)"
-      >
-        Примечание
-      </p>
-      <p
-        class="modal-window__menu-item"
-        :class="{active: activeTab === 3}"
-        @click="selectTab(3)"
-      >
-        Рекомендации
-      </p>
-    </div>
-    <div class="modal-window__bottom">
-      <div class="modal-window__menu-item__info" v-if="activeTab === 0">
-        <p
-          class="menu-item__info-title"
-          v-text="activeProduct.components.analytical.title"
-        ></p>
-        <div>
-          <div
-            class="wrapper_menu-items"
-            v-for="item in activeProduct.components.analytical.list"
-          >
-            <p class="menu-item__info" v-text="item[0]"></p>
-            <p class="menu-item__info" v-text="item[1]"></p>
+      <div class="modal-window__bottom">
+        <div class="modal-window__menu-item__info" v-if="activeTab === 0">
+          <p
+            class="menu-item__info-title"
+            v-text="activeProduct.components.analytical.title"
+          ></p>
+          <div>
+            <div
+              class="wrapper_menu-items"
+              v-for="item in activeProduct.components.analytical.list"
+            >
+              <p class="menu-item__info" v-text="item[0]"></p>
+              <p class="menu-item__info" v-text="item[1]"></p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="modal-window__menu-item__info" v-if="activeTab === 1">
-        <div>
-          <div class="wrapper_menu-items list">
-            <p
-              class="menu-item__info"
-              v-for="item in activeProduct.ingredients.list"
-              v-text="'—' + item"
-            ></p>
+        <div class="modal-window__menu-item__info" v-if="activeTab === 1">
+          <div>
+            <div class="wrapper_menu-items list">
+              <p
+                class="menu-item__info"
+                v-for="item in activeProduct.ingredients.list"
+                v-text="'—' + item"
+              ></p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="modal-window__menu-item__info" v-if="activeTab === 2">
-        <div v-html="activeProduct.notice[0]"></div>
-      </div>
+        <div class="modal-window__menu-item__info" v-if="activeTab === 2">
+          <div v-html="activeProduct.notice[0]"></div>
+        </div>
 
-      <div class="modal-window__menu-item__info" v-if="activeTab === 3">
-        <div v-html="activeProduct.recommendations.desc"></div>
+        <div class="modal-window__menu-item__info" v-if="activeTab === 3">
+          <div v-html="activeProduct.recommendations.desc"></div>
+        </div>
       </div>
     </div>
   </div>
