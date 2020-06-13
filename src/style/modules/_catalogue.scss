@@ -215,13 +215,35 @@
   &__price {
     font-weight: bold;
     font-size: 24px;
+    &.small {
+      font-weight: 400;
+      font-size: 14px;
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
   }
 
   &__volume {
     color: #828ca7;
     margin-left: 12px;
     font-size: 24px;
+    &.small {
+      font-size: 14px;
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
   }
+
+  &__pricing {
+    margin-top: -12px;
+    margin-bottom: 12px;
+
+    td {
+      padding-bottom: 4px;
+      padding-right: 12px;
+    }
+  }
+
   &__description {
     color: #828ca7;
     max-width: 455px;

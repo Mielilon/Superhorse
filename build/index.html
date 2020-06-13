@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Protect&Feed – гигиенические средства для КРС и МРС</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/main.css" />
-    <link
-      rel="stylesheet"
-      href="path/to/font-awesome/css/font-awesome.min.css"
-    />
   </head>
 
   <body>
@@ -300,17 +297,39 @@
                     Выбор клиентов
                   </p>
                   <h4 class="modal-window__head" v-text="activeProduct.title"></h4>
-                  <span class="m-t--20 flex">
-                    <p
-                      class="modal-window__price"
-                      v-text="activeProduct.price + 'р.'"
-                    ></p>
-                    <p
-                      class="modal-window__volume"
-                      v-if="activeProduct.options"
-                      v-text="activeProduct.options[0].name"
-                    ></p>
-                  </span>
+      
+                  <!-- Основная цена -->
+      
+                  <table class="modal-window__pricing">
+                    <tr>
+                      <td
+                        class="modal-window__price"
+                        v-text="activeProduct.price + 'р.'"
+                      ></td>
+                      <td
+                        class="modal-window__volume"
+                        v-if="activeProduct.options"
+                        v-text="activeProduct.options[0].name"
+                      ></td>
+                    </tr>
+      
+                    <!-- Дополнительные цены -->
+      
+                    <tr
+                      v-for="option in activeProduct.options ? activeProduct.options.slice(1) : []"
+                    >
+                      <td
+                        class="modal-window__price small"
+                        v-text="option.price ? option.price + 'р.' : 'Договорная'"
+                      ></td>
+                      <td
+                        class="modal-window__volume small"
+                        v-if="activeProduct.options"
+                        v-text="option.name"
+                      ></td>
+                    </tr>
+                  </table>
+      
                   <p
                     class="modal-window__description"
                     v-text="activeProduct.longDesc"
