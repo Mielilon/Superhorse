@@ -1,400 +1,422 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Protect&Feed – гигиенические средства для КРС и МРС</title>
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
 
-  <body>
-    <div id="app">
-      <div class="hat" id="home">
-        <div class="container">
-          <div class="content">
-            <img class="hat__logo" src="./img/Logo.png" alt="Логотип" />
-      
-            <div class="spacer"></div>
-            <h1 class="hat__title">
-              <p class="hat__title-pre">Специальные</p>
-              гигиенические средства
-              <p class="hat__title-post">
-                для обработки вымени и ухода за копытами КРС и МРС
-              </p>
-            </h1>
-            <div class="hat__tel-wrapper flex">
-              <button class="button">Обратный звонок</button>
-              <a class="hat__tel" href="tel: +7 (964) 935-85-24"
-                >+7 (964) 935-85-24</a
-              >
-            </div>
-            <nav class="hat__menu">
-              <a class="hat__menu-item" href="#home">Главная</a>
-              <a class="hat__menu-item" href="#catalog">Каталог</a>
-              <a class="hat__menu-item" href="#order">Как сделать заказ</a>
-              <a class="hat__menu-item" href="#dealers">Дилеры</a>
-              <a class="hat__menu-item" href="#contacts">Контакты</a>
-            </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Protect&Feed – гигиенические средства для КРС и МРС</title>
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="hat" id="home">
+      <div class="container">
+        <div class="content">
+          <img class="hat__logo" src="./img/Logo.png" alt="Логотип" />
+    
+          <div class="spacer"></div>
+          <h1 class="hat__title">
+            <p class="hat__title-pre">Специальные</p>
+            гигиенические средства
+            <p class="hat__title-post">
+              для обработки вымени и ухода за копытами КРС и МРС
+            </p>
+          </h1>
+          <div class="hat__tel-wrapper flex">
+            <button class="button">Обратный звонок</button>
+            <a class="hat__tel" href="tel: +7 (964) 935-85-24"
+              >+7 (964) 935-85-24</a
+            >
           </div>
+          <nav class="hat__menu">
+            <a class="hat__menu-item" href="#home">Главная</a>
+            <a class="hat__menu-item" href="#catalog">Каталог</a>
+            <a class="hat__menu-item" href="#order">Как сделать заказ</a>
+            <a class="hat__menu-item" href="#dealers">Дилеры</a>
+            <a class="hat__menu-item" href="#contacts">Контакты</a>
+          </nav>
         </div>
       </div>
-      <!--  -->
-      <div class="catalogue" id="catalog">
-        <div class="container m-t-60">
-          <div class="content">
-            <h2 class="title">Каталог</h2>
-            <div class="catalogue__goods" style="visibility: hidden;">
-              <div
-                class="goods-item flex"
-                v-for="(product, id) in productsData"
-                :key="id"
-                @click="showProductModal(id)"
-              >
-                <img
-                  class="goods-item__img"
-                  :src="`./img/products/${id}-1.jpg`"
-                  alt="Единица товара"
-                />
-                <div class="goods-item__info">
-                  <p class="goods-item__change" v-if="product.isHot">
-                    Выбор клиентов
-                  </p>
-                  <p class="goods-item__head" v-text="product.title"></p>
-                  <span class="m-t--20 flex">
-                    <p class="goods-item__price" v-text="product.price + 'р.'"></p>
-                    <p
-                      class="goods-item__volume"
-                      v-if="product.options"
-                      v-text="product.options[0].name"
-                    ></p>
-                  </span>
-                  <p class="goods-item__description" v-text="product.desc"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--  -->
-      <div class="order" id="order">
-        <div class="container">
-          <div class="content m-t-60">
-            <div class="content-position">
-              <div class="order-info">
-                <h2 class="order-title">Как сделать заказ?</h2>
-                <p class="order-description">
-                  Заказать товар можно непосредственно на сайте заполнив форму
-                  предварительного заказа либо заказав обратный звонок. Через
-                  некоторое время с вами свяжется специалист для уточнения деталей
-                  заказа и ответит на все ваши вопросы касательно продукции. После
-                  подтверждения заказа составляется договор с клиентом и выставляется
-                  счёт на оплату. <br /><br />
-                  Доставка, скидки и бонусы обсуждаются индивидуально.
-                </p>
-              </div>
-              <img class="cow-1" src="./img/cattle-1.png" alt="Фото коровы" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--  -->
-      <div class="contacts" id="contacts">
-        <div class="container">
-          <div class="content m-t-60">
-            <h2 class="title">Контакты</h2>
-            <div class="flex contacts-container">
+    </div>
+    <!--  -->
+    <div class="catalogue" id="catalog">
+      <div class="container m-t-60">
+        <div class="content">
+          <h2 class="title">Каталог</h2>
+          <div class="catalogue__goods" style="visibility: hidden;">
+            <div
+              class="goods-item flex"
+              v-for="(product, id) in productsData"
+              :key="id"
+              @click="showProductModal(id)"
+            >
               <img
-                class="contacts__img"
-                src="./img/cow-2.png"
-                alt="Изображение коровы"
-              />
-              <div class="contacts__info">
-                <div class="flex contacts__info-wrapper">
-                  <div class="info-number">
-                    <p class="contacts__description">Звоните нам:</p>
-                    <a class="number" href="tel: +7 (964) 935-85-24"
-                      >+7 (964) 935-85-24</a
-                    >
-                  </div>
-                  <div class="info-news">
-                    <p class="contacts__description">Следите за новостями:</p>
-                    <div class="info-news__social-networks">
-                      <a
-                        href="https://www.facebook.com/profile.php?id=100042135592432"
-                        target="_blank"
-                        ><img
-                          class="social-networks__item"
-                          src="./img/facebook.png"
-                          alt="facebook"
-                      /></a>
-      
-                      <a href="https://vk.com/id523357201" target="_blank"
-                        ><img
-                          class="social-networks__item"
-                          src="./img/vk.png"
-                          alt="VK"
-                      /></a>
-                      <a href="https://www.instagram.com/protectfeed/" target="_blank"
-                        ><img
-                          class="social-networks__item"
-                          src="./img/instagram.png"
-                          alt="instagram"
-                      /></a>
-      
-                      <a
-                        href="https://www.youtube.com/channel/UCzt2k7UdYGa8tynfoCzcLlg?view_as=subscriber"
-                        target="_blank"
-                        ><img
-                          class="social-networks__item"
-                          src="./img/youtube.png"
-                          alt="youtube"
-                      /></a>
-                    </div>
-                  </div>
-                </div>
-                <!-- gigienakrs@yandex.ru -->
-                <div class="contacts__form">
-                  <p class="contacts__description pre-order">
-                    Предварительный заказ:
-                  </p>
-                  <input
-                    class="contacts__form-input"
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Имя"
-                    tabindex="1"
-                  /><br />
-                  <input
-                    class="contacts__form-input"
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Email"
-                    tabindex="2"
-                  />
-                  <input
-                    class="contacts__form-input m-l-24"
-                    type="text"
-                    name="number"
-                    id="number"
-                    placeholder="+7 (___) -___-__-__"
-                    tabindex="3"
-                  /><br />
-                  <input
-                    class="contacts__form-input contacts__form-comment"
-                    type="text"
-                    name="comment"
-                    id="comment"
-                    placeholder="Комментарий"
-                    tabindex="4"
-                  />
-                </div>
-                <button class="button button-black" onclick="" tabindex="5">
-                  Отправить
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--  -->
-      <div class="footer">
-        <div class="container static">
-          <div class="content">
-            <div class="flex col">
-              <a href="/index.html"
-                ><img class="footer__logo" src="./img/Logo.png" alt="Логотип"
-              /></a>
-              <div class="footer__dealers">
-                <h4 class="dealers__header" id="dealers">Дилеры</h4>
-                <div class="dealers__wrapper flex">
-                  <div v-for="region in regionsList">
-                    <a
-                      class="grey-text link tooltip-trigger"
-                      aria-describedby="tooltip"
-                      id="button"
-                      v-text="region.region"
-                    >
-                      Южный округ</a
-                    >
-                    <div id="tooltip" class="tooltip" role="tooltip">
-                      <span v-text="region.name">Евгений</span>
-                      <a :href="`tel:${region.phone}`" v-text="region.phone"
-                        >8 (905) 472-33-30</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="footer__info flex">
-              <a class="grey-text no-m" href="/about.html">Коротко о продукции</a>
-              <p class="date">Gigiena © <span v-text="getCurrentYear">2020</span></p>
-              <a class="grey-text no-m" href="/policy.html">Политика компании</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--  -->
-      <div
-        id="modal-window"
-        class="modal-window"
-        :class="{active: isProductModalActive}"
-        @click.self="closeProductModal"
-      >
-        <div class="modal-window-wrapper" v-if="selectedProductId">
-          <img
-            @click="closeProductModal"
-            class="modal-window__close"
-            src="./img/close.png"
-            alt="Закрыть"
-          />
-          <div class="modal-window__content">
-            <div class="flex modal-window__product">
-              <img
-                class="modal-window__img"
-                :src="`./img/products/${activeProduct.id}-1.jpg`"
+                class="goods-item__img"
+                :src="`./img/products/${id}-1.jpg`"
                 alt="Единица товара"
               />
-              <div class="modal-window__info-wrapper">
-                <div class="modal-window__info">
-                  <p class="modal-window__change" v-if="activeProduct.isHot">
-                    Выбор клиентов
-                  </p>
-                  <h4 class="modal-window__head" v-text="activeProduct.title"></h4>
-      
-                  <!-- Основная цена -->
-      
-                  <table class="modal-window__pricing">
-                    <tr>
-                      <td
-                        class="modal-window__price"
-                        v-text="activeProduct.price + 'р.'"
-                      ></td>
-                      <td
-                        class="modal-window__volume"
-                        v-if="activeProduct.options"
-                        v-text="activeProduct.options[0].name"
-                      ></td>
-                    </tr>
-      
-                    <!-- Дополнительные цены -->
-      
-                    <tr
-                      v-for="option in activeProduct.options ? activeProduct.options.slice(1) : []"
-                    >
-                      <td
-                        class="modal-window__price small"
-                        v-text="option.price ? option.price + 'р.' : 'Договорная'"
-                      ></td>
-                      <td
-                        class="modal-window__volume small"
-                        v-if="activeProduct.options"
-                        v-text="option.name"
-                      ></td>
-                    </tr>
-                  </table>
-      
-                  <p
-                    class="modal-window__description"
-                    v-text="activeProduct.longDesc"
-                  ></p>
-                </div>
-                <div class="wrapper-button">
-                  <a
-                    href="#contacts"
-                    @click="closeProductModal"
-                    class="button button-black button-little"
-                  >
-                    Предварительный заказ
-                  </a>
-                  <a
-                    class="download tac"
-                    :href="`/pdf/${activeProduct.pdf}.pdf`"
-                    target="_blank"
-                    >Скачать PDF</a
-                  >
-                </div>
-                <p class="little-text">
-                  Условия доставки, скидки и бонусы обсуждаются индивидуально
+              <div class="goods-item__info">
+                <p class="goods-item__change" v-if="product.isHot">
+                  Выбор клиентов
                 </p>
-              </div>
-            </div>
-            <div class="flex modal-window__menu">
-              <p
-                class="modal-window__menu-item"
-                :class="{active: activeTab === 0}"
-                @click="selectTab(0)"
-              >
-                Компоненты
-              </p>
-              <p
-                class="modal-window__menu-item"
-                :class="{active: activeTab === 1}"
-                @click="selectTab(1)"
-              >
-                Ингредиенты
-              </p>
-              <p
-                class="modal-window__menu-item"
-                :class="{active: activeTab === 2}"
-                @click="selectTab(2)"
-              >
-                Примечание
-              </p>
-              <p
-                class="modal-window__menu-item"
-                :class="{active: activeTab === 3}"
-                @click="selectTab(3)"
-              >
-                Рекомендации
-              </p>
-            </div>
-            <div class="modal-window__bottom">
-              <div class="modal-window__menu-item__info" v-if="activeTab === 0">
-                <p
-                  class="menu-item__info-title"
-                  v-text="activeProduct.components.analytical.title"
-                ></p>
-                <div>
-                  <div
-                    class="wrapper_menu-items"
-                    v-for="item in activeProduct.components.analytical.list"
-                  >
-                    <p class="menu-item__info" v-text="item[0]"></p>
-                    <p class="menu-item__info" v-text="item[1]"></p>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="modal-window__menu-item__info" v-if="activeTab === 1">
-                <div>
-                  <div class="wrapper_menu-items list">
-                    <p
-                      class="menu-item__info"
-                      v-for="item in activeProduct.ingredients.list"
-                      v-text="'—' + item"
-                    ></p>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="modal-window__menu-item__info" v-if="activeTab === 2">
-                <div v-html="activeProduct.notice[0]"></div>
-              </div>
-      
-              <div class="modal-window__menu-item__info" v-if="activeTab === 3">
-                <div v-html="activeProduct.recommendations.desc"></div>
+                <p class="goods-item__head" v-text="product.title"></p>
+                <span class="m-t--20 flex">
+                  <p class="goods-item__price" v-text="product.price + 'р.'"></p>
+                  <p
+                    class="goods-item__volume"
+                    v-if="product.options"
+                    v-text="product.options[0].name"
+                  ></p>
+                </span>
+                <p class="goods-item__description" v-text="product.desc"></p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!--  -->
+    <div class="order" id="order">
+      <div class="container">
+        <div class="content m-t-60">
+          <div class="content-position">
+            <div class="order-info">
+              <h2 class="order-title">Как сделать заказ?</h2>
+              <p class="order-description">
+                Заказать товар можно непосредственно на сайте заполнив форму
+                предварительного заказа либо заказав обратный звонок. Через
+                некоторое время с вами свяжется специалист для уточнения деталей
+                заказа и ответит на все ваши вопросы касательно продукции. После
+                подтверждения заказа составляется договор с клиентом и выставляется
+                счёт на оплату. <br /><br />
+                Доставка, скидки и бонусы обсуждаются индивидуально.
+              </p>
+            </div>
+            <img class="cow-1" src="./img/cattle-1.png" alt="Фото коровы" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="contacts" id="contacts">
+      <div class="container">
+        <div class="content m-t-60">
+          <h2 class="title">Контакты</h2>
+          <div class="flex contacts-container">
+            <img
+              class="contacts__img"
+              src="./img/cow-2.png"
+              alt="Изображение коровы"
+            />
+            <div class="contacts__info">
+              <div class="flex contacts__info-wrapper">
+                <div class="info-number">
+                  <p class="contacts__description">Звоните нам:</p>
+                  <a class="number" href="tel: +7 (964) 935-85-24"
+                    >+7 (964) 935-85-24</a
+                  >
+                </div>
+                <div class="info-news">
+                  <p class="contacts__description">Следите за новостями:</p>
+                  <div class="info-news__social-networks">
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100042135592432"
+                      target="_blank"
+                      ><img
+                        class="social-networks__item"
+                        src="./img/facebook.png"
+                        alt="facebook"
+                    /></a>
+    
+                    <a href="https://vk.com/id523357201" target="_blank"
+                      ><img
+                        class="social-networks__item"
+                        src="./img/vk.png"
+                        alt="VK"
+                    /></a>
+                    <a href="https://www.instagram.com/protectfeed/" target="_blank"
+                      ><img
+                        class="social-networks__item"
+                        src="./img/instagram.png"
+                        alt="instagram"
+                    /></a>
+    
+                    <a
+                      href="https://www.youtube.com/channel/UCzt2k7UdYGa8tynfoCzcLlg?view_as=subscriber"
+                      target="_blank"
+                      ><img
+                        class="social-networks__item"
+                        src="./img/youtube.png"
+                        alt="youtube"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+              <!-- gigienakrs@yandex.ru -->
+              <div class="contacts__form">
+                <p class="contacts__description pre-order">
+                  Предварительный заказ:
+                </p>
+                <input
+                  class="contacts__form-input"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Имя"
+                  tabindex="1"
+                /><br />
+                <input
+                  class="contacts__form-input"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  tabindex="2"
+                />
+                <input
+                  class="contacts__form-input m-l-24"
+                  type="text"
+                  name="number"
+                  id="number"
+                  placeholder="+7 (___) -___-__-__"
+                  tabindex="3"
+                /><br />
+                <input
+                  class="contacts__form-input contacts__form-comment"
+                  type="text"
+                  name="comment"
+                  id="comment"
+                  placeholder="Комментарий"
+                  tabindex="4"
+                />
+              </div>
+              <button class="button button-black" onclick="" tabindex="5">
+                Отправить
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="footer">
+      <div class="container static">
+        <div class="content">
+          <div class="flex col">
+            <a href="/index.html"
+              ><img class="footer__logo" src="./img/Logo.png" alt="Логотип"
+            /></a>
+            <div class="footer__dealers">
+              <h4 class="dealers__header" id="dealers">Дилеры</h4>
+              <div class="dealers__wrapper flex">
+                <div v-for="region in regionsList">
+                  <a
+                    class="grey-text link tooltip-trigger"
+                    aria-describedby="tooltip"
+                    id="button"
+                    v-text="region.region"
+                  >
+                    Южный округ</a
+                  >
+                  <div id="tooltip" class="tooltip" role="tooltip">
+                    <span v-text="region.name">Евгений</span>
+                    <a :href="`tel:${region.phone}`" v-text="region.phone"
+                      >8 (905) 472-33-30</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__info flex">
+            <a class="grey-text no-m" href="/about.html">Коротко о продукции</a>
+            <p class="date">Gigiena © <span v-text="getCurrentYear">2020</span></p>
+            <a class="grey-text no-m" href="/policy.html">Политика компании</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div
+      id="modal-window"
+      class="modal-window"
+      :class="{active: isProductModalActive}"
+      @click.self="closeProductModal"
+    >
+      <div class="modal-window-wrapper" v-if="selectedProductId">
+        <img
+          @click="closeProductModal"
+          class="modal-window__close"
+          src="./img/close.png"
+          alt="Закрыть"
+        />
+        <div class="modal-window__content">
+          <div class="flex modal-window__product">
+            <img
+              class="modal-window__img"
+              :src="`./img/products/${activeProduct.id}-1.jpg`"
+              alt="Единица товара"
+            />
+            <div class="modal-window__info-wrapper">
+              <div class="modal-window__info">
+                <p class="modal-window__change" v-if="activeProduct.isHot">
+                  Выбор клиентов
+                </p>
+                <h4 class="modal-window__head" v-text="activeProduct.title"></h4>
+    
+                <!-- Основная цена -->
+    
+                <table class="modal-window__pricing">
+                  <tr>
+                    <td
+                      class="modal-window__price"
+                      v-text="activeProduct.price + 'р.'"
+                    ></td>
+                    <td
+                      class="modal-window__volume"
+                      v-if="activeProduct.options"
+                      v-text="activeProduct.options[0].name"
+                    ></td>
+                  </tr>
+    
+                  <!-- Дополнительные цены -->
+    
+                  <tr
+                    v-for="option in activeProduct.options ? activeProduct.options.slice(1) : []"
+                  >
+                    <td
+                      class="modal-window__price small"
+                      v-text="option.price ? option.price + 'р.' : 'Договорная'"
+                    ></td>
+                    <td
+                      class="modal-window__volume small"
+                      v-if="activeProduct.options"
+                      v-text="option.name"
+                    ></td>
+                  </tr>
+                </table>
+    
+                <p
+                  class="modal-window__description"
+                  v-text="activeProduct.longDesc"
+                ></p>
+              </div>
+              <div class="wrapper-button">
+                <a
+                  href="#contacts"
+                  @click="closeProductModal"
+                  class="button button-black button-little"
+                >
+                  Предварительный заказ
+                </a>
+                <a
+                  class="download tac"
+                  :href="`/pdf/${activeProduct.pdf}.pdf`"
+                  target="_blank"
+                  >Скачать PDF</a
+                >
+              </div>
+              <p class="little-text">
+                Условия доставки, скидки и бонусы обсуждаются индивидуально
+              </p>
+            </div>
+          </div>
+          <div class="flex modal-window__menu">
+            <p
+              class="modal-window__menu-item"
+              :class="{active: activeTab === 0}"
+              @click="selectTab(0)"
+            >
+              Компоненты
+            </p>
+            <p
+              class="modal-window__menu-item"
+              :class="{active: activeTab === 1}"
+              @click="selectTab(1)"
+            >
+              Ингредиенты
+            </p>
+            <p
+              class="modal-window__menu-item"
+              :class="{active: activeTab === 2}"
+              @click="selectTab(2)"
+            >
+              Примечание
+            </p>
+            <p
+              class="modal-window__menu-item"
+              :class="{active: activeTab === 3}"
+              @click="selectTab(3)"
+            >
+              Рекомендации
+            </p>
+          </div>
+          <div class="modal-window__bottom">
+            <div class="modal-window__menu-item__info" v-if="activeTab === 0">
+              <p
+                class="menu-item__info-title"
+                v-text="activeProduct.components.analytical.title"
+              ></p>
+              <div>
+                <div
+                  class="wrapper_menu-items"
+                  v-for="item in activeProduct.components.analytical.list"
+                >
+                  <p class="menu-item__info" v-text="item[0]"></p>
+                  <p class="menu-item__info" v-text="item[1]"></p>
+                </div>
+              </div>
+            </div>
+    
+            <div class="modal-window__menu-item__info" v-if="activeTab === 1">
+              <div>
+                <div class="wrapper_menu-items list">
+                  <p
+                    class="menu-item__info"
+                    v-for="item in activeProduct.ingredients.list"
+                    v-text="'—' + item"
+                  ></p>
+                </div>
+              </div>
+            </div>
+    
+            <div class="modal-window__menu-item__info" v-if="activeTab === 2">
+              <div v-html="activeProduct.notice[0]"></div>
+            </div>
+    
+            <div class="modal-window__menu-item__info" v-if="activeTab === 3">
+              <div v-html="activeProduct.recommendations.desc"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <script src="js/main.js"></script>
-  </body>
+    <div id="modal-window-feedback" class="modal-window flex">
+        <div class="modal-window-wrapper">
+            <img class="modal-window__close" src="./img/close.png" alt="Закрыть">
+            <div class="modal-window-wrapper modal-feedback">
+                <div class="modal-window__content">
+                    <h2 class="modal-window__title">Заказать обратный звонок</h2>
+                    <div>
+                        <input class="feedback__form-input" type="text" name="name" id="name" placeholder="Имя"
+                            tabindex="1" /><br />
+                        <input class="feedback__form-input" type="text" name="number" id="number"
+                            placeholder="+7 (___) -___-__-__" tabindex="3" />
+                    </div>
+                    <button class="button button-black m-t-48" onclick="" tabindex="5">
+                        Отправить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
 </html>
