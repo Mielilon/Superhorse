@@ -138,6 +138,7 @@
 }
 //Стили для модального окна
 .modal-window {
+  display: flex;
   position: fixed;
   width: 100%;
   z-index: 50;
@@ -152,8 +153,7 @@
 
   &-wrapper {
     position: relative;
-    margin-top: auto;
-    margin-bottom: auto;
+    align-items: center;
   }
 
   &.active {

@@ -1,0 +1,22 @@
+.modal-window {
+  &__title {
+    font-size: 32px;
+  }
+}
+.feedback__form-input {
+  border: none;
+  border-bottom: 1px solid #99a1b6;
+  font-size: 18px;
+  width: 100%;
+  padding: 6px;
+  margin-top: 32px;
+  color: #828ca7;
+  font-size: 18px;
+}
+.feedback__form-input::placeholder {
+  color: #d8dbe2;
+  font-size: 18px;
+}
+.modal-window-wrapper.modal-feedback {
+  align-items: center;
+}
