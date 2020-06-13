@@ -8,6 +8,7 @@
 
   &__info {
     margin-left: 80px;
+    max-width: 509px;
   }
 
   @media (max-width: 1400px) {
@@ -62,11 +63,27 @@
     border: none;
     border-bottom: 1px solid #99a1b6;
     font-size: 18px;
-    width: 240px;
+    width: 100%;
     padding: 6px;
     margin-top: 32px;
-    color: #828ca7;
+    color: #222;
     font-size: 18px;
+
+    &-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      & > div {
+        width: calc(50% - 12px);
+      }
+    }
+
+    &-error {
+      display: block;
+      font-size: 13px;
+      color: #f33;
+      margin-top: 4px;
+    }
   }
 
   &-input::placeholder {
@@ -77,9 +94,14 @@
   &-comment {
     width: 100%;
   }
-  @media (max-width: 1400px) {
+
+  @include respond-to(md) {
     &-input {
-      width: 100%;
+      &-group {
+        & > div {
+          width: 100%;
+        }
+      }
     }
   }
 }
