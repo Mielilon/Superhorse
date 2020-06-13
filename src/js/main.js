@@ -11,6 +11,7 @@ const app = new Vue({
   data: () => ({
     productsData,
     isProductModalActive: false,
+    isCallModalActive: false,
     selectedProductId: null,
     activeTab: 0,
     regionsList,
@@ -24,7 +25,6 @@ const app = new Vue({
         value: '',
         alert: '',
         required: false,
-        regExp: /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i,
       },
       phone: {
         value: '',
@@ -38,6 +38,7 @@ const app = new Vue({
       },
     },
     contactFormResult: '',
+    callFormResult: '',
   }),
   mounted() {
     const catalogue = $('.catalogue__goods');
@@ -52,7 +53,7 @@ const app = new Vue({
     },
   },
   methods: {
-    prepareMailAndSend(formName = 'contactForm') {
+    prepareMailAndSend(formName = 'contactForm', isCall) {
       let essentialMsg = 'Поле обязятельно для заполнения';
       let incorrectMsg = 'Поле заполнено некорректно';
       let error = false;
@@ -77,16 +78,23 @@ const app = new Vue({
         }
       }
 
-      if (!error) this.sendMail(formName);
+      if (!error) this.sendMail(formName, isCall);
     },
-    sendMail(formName = 'contactForm') {
+    sendMail(formName = 'contactForm', isCall) {
       let bodyFormData = new FormData();
       bodyFormData.set('name', this[formName].name.value);
       bodyFormData.set('email', this[formName].email.value);
       bodyFormData.set('phone', this[formName].phone.value);
-      bodyFormData.set('message', this[formName].message.value);
+      bodyFormData.set(
+        'message',
+        isCall ? 'Запрос обратного звонка' : this[formName].message.value
+      );
 
-      this[formName + 'Result'] = 'Отправляется...';
+      if (isCall) {
+        this.callFormResult = 'Отправляется...';
+      } else {
+        this[formName + 'Result'] = 'Отправляется...';
+      }
 
       axios({
         method: 'post',
@@ -95,12 +103,27 @@ const app = new Vue({
         config: { headers: { 'Content-Type': 'multipart/form-data' } },
       })
         .then((res) => {
-          this[formName + 'Result'] = 'Сообщение успешно отправлено';
+          if (isCall) {
+            this.callFormResult = 'Сообщение успешно отправлено';
+          } else {
+            this[formName + 'Result'] = 'Сообщение успешно отправлено';
+          }
         })
         .catch((err) => {
-          this[formName + 'Result'] =
-            'При отправке сообщения возникла ошибка. Свяжитесь с нами по почте gigienakrs@yandex.ru';
+          if (isCall) {
+            this.callFormResult =
+              'При отправке сообщения возникла ошибка. Свяжитесь с нами по почте gigienakrs@yandex.ru';
+          } else {
+            this[formName + 'Result'] =
+              'При отправке сообщения возникла ошибка. Свяжитесь с нами по почте gigienakrs@yandex.ru';
+          }
         });
+    },
+    showCallModal() {
+      this.isCallModalActive = true;
+    },
+    closeCallModal() {
+      this.isCallModalActive = false;
     },
     showProductModal(id) {
       this.isProductModalActive = true;

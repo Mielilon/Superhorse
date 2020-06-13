@@ -154,6 +154,7 @@
   &-wrapper {
     position: relative;
     align-items: center;
+    margin: auto;
   }
 
   &.active {
@@ -171,7 +172,7 @@
     margin: 20px;
     width: 100%;
     max-width: 680px;
-    overflow-y: scroll;
+    overflow-y: auto;
     margin: auto;
     max-height: calc(100vh - 80px);
   }
