@@ -121,17 +121,21 @@ const app = new Vue({
     },
     showCallModal() {
       this.isCallModalActive = true;
+      this.disableWindowScroll();
     },
     closeCallModal() {
       this.isCallModalActive = false;
+      this.enableWindowScroll();
     },
     showProductModal(id) {
       this.isProductModalActive = true;
       this.selectedProductId = id;
+      this.disableWindowScroll();
     },
     closeProductModal() {
       this.isProductModalActive = false;
       this.activeTab = 0;
+      this.enableWindowScroll();
     },
     selectTab(id) {
       this.activeTab = id;
@@ -143,6 +147,12 @@ const app = new Vue({
           $('.contacts__description.pre-order').getBoundingClientRect().top +
           pageYOffset,
       });
+    },
+    enableWindowScroll() {
+      document.body.style.overflow = 'auto';
+    },
+    disableWindowScroll() {
+      document.body.style.overflow = 'auto';
     },
   },
 });
