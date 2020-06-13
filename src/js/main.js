@@ -136,6 +136,14 @@ const app = new Vue({
     selectTab(id) {
       this.activeTab = id;
     },
+    orderProduct() {
+      this.closeProductModal();
+      window.scrollTo({
+        top:
+          $('.contacts__description.pre-order').getBoundingClientRect().top +
+          pageYOffset,
+      });
+    },
   },
 });
 
