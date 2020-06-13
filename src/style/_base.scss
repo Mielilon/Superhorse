@@ -9,6 +9,7 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 @media (max-width: 319px) {
   body,
   html {
@@ -146,6 +147,10 @@ p {
   display: flex;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
 .m-l-24 {
   margin-left: 24px;
 }
@@ -164,4 +169,10 @@ p {
 
 .static {
   position: static;
+}
+
+input,
+textarea {
+  font-family: 'PT Sans', sans-serif;
+  resize: none;
 }
