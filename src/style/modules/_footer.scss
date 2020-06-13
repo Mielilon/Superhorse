@@ -71,6 +71,10 @@
   color: #828ca7;
   display: inherit;
   margin-left: 40px;
+
+  &.link {
+    text-decoration: underline;
+  }
 }
 
 .grey-text.no-m {

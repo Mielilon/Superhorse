@@ -1,5 +1,5 @@
 <div class="footer">
-  <div class="container">
+  <div class="container static">
     <div class="content">
       <div class="flex col">
         <a href="/index.html"
@@ -8,54 +8,22 @@
         <div class="footer__dealers">
           <h4 class="dealers__header" id="dealers">Дилеры</h4>
           <div class="dealers__wrapper flex">
-            <a
-              title="Евгений 8 (905) 472-33-30"
-              href="tel:8 (905) 472-33-30"
-              class="grey-text"
-              >Южный округ</a
-            >
-            <a
-              title="Умар 8 (903) 422- 57-57"
-              href="tel:8 (903) 422- 57-57"
-              class="grey-text"
-              >Северо-Кавказский округ</a
-            >
-            <a
-              title="Александр 8 (963) 856-56-57"
-              href="tel:8 (963) 856-56-57"
-              class="grey-text"
-              >Уральский округ</a
-            >
-            <a
-              title="Екатерина 8 (913) 242-18-22"
-              href="tel:8 (913) 242-18-22"
-              class="grey-text"
-              >Сибирский округ</a
-            >
-            <a
-              title="Венера 8 (987) 290-83-41"
-              href="tel:8 (987) 290-83-41"
-              class="grey-text"
-              >Приволжский округ</a
-            >
-            <a
-              title="Евгений 8 (905) 472-33-30"
-              href="tel:8 (905) 472-33-30"
-              class="grey-text"
-              >Центральный округ</a
-            >
-            <a
-              title="Евгений 8 (905) 472-33-30"
-              href="tel:8 (905) 472-33-30"
-              class="grey-text"
-              >Северо-Западный округ</a
-            >
-            <a
-              title="Евгений 8 (905) 472-33-30"
-              href="tel:8 (905) 472-33-30"
-              class="grey-text"
-              >Дальневосточный округ</a
-            >
+            <div v-for="region in regionsList">
+              <a
+                class="grey-text link tooltip-trigger"
+                aria-describedby="tooltip"
+                id="button"
+                v-text="region.region"
+              >
+                Южный округ</a
+              >
+              <div id="tooltip" class="tooltip" role="tooltip">
+                <span v-text="region.name">Евгений</span>
+                <a :href="`tel:${region.phone}`" v-text="region.phone"
+                  >8 (905) 472-33-30</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
