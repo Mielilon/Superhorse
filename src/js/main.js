@@ -90,7 +90,7 @@ const app = new Vue({
 
       axios({
         method: 'post',
-        url: '/contacts.php',
+        url: '/home.php',
         data: bodyFormData,
         config: { headers: { 'Content-Type': 'multipart/form-data' } },
       })
