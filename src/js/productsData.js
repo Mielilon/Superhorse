@@ -186,14 +186,14 @@ const productsData = {
     contactOnly: true,
     options: [
       {
-        id: 1,
-        name: '5 кг',
-        price: 750,
-      },
-      {
         id: 2,
         name: '20 кг',
         price: 2260,
+      },
+      {
+        id: 1,
+        name: '5 кг',
+        price: 750,
       },
       {
         id: 3,

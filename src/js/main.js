@@ -142,17 +142,17 @@ const app = new Vue({
     },
     orderProduct() {
       this.closeProductModal();
-      window.scrollTo({
+      document.body.scrollTo({
         top:
           $('.contacts__description.pre-order').getBoundingClientRect().top +
-          pageYOffset,
+          document.body.scrollTop,
       });
     },
     enableWindowScroll() {
       document.body.style.overflow = 'auto';
     },
     disableWindowScroll() {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = 'hidden';
     },
   },
 });
