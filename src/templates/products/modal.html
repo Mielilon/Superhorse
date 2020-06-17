@@ -70,6 +70,7 @@
               Предварительный заказ
             </a>
             <a
+              v-if="activeProduct.pdf"
               class="download tac"
               :href="`/pdf/${activeProduct.pdf}.pdf`"
               target="_blank"
@@ -87,7 +88,7 @@
           :class="{active: activeTab === 0}"
           @click="selectTab(0)"
         >
-          Компоненты
+          Показатели
         </p>
         <p
           class="modal-window__menu-item"

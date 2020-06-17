@@ -46,7 +46,9 @@ const app = new Vue({
   },
   computed: {
     activeProduct() {
-      return this.productsData[this.selectedProductId];
+      return this.productsData.find(
+        (item) => item.id === this.selectedProductId
+      );
     },
     getCurrentYear() {
       return new Date().getFullYear();

@@ -5,13 +5,13 @@
       <div class="catalogue__goods" style="visibility: hidden;">
         <div
           class="goods-item flex"
-          v-for="(product, id) in productsData"
-          :key="id"
-          @click="showProductModal(id)"
+          v-for="(product) in productsData"
+          :key="product.id"
+          @click="showProductModal(product.id)"
         >
           <img
             class="goods-item__img"
-            :src="`./img/products/${id}-1.jpg`"
+            :src="`./img/products/${product.id}-1.jpg`"
             alt="Единица товара"
           />
           <div class="goods-item__info">

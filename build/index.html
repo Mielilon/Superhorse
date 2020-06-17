@@ -7,6 +7,10 @@
     <title>Protect&Feed – гигиенические средства для КРС и МРС</title>
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/main.css" />
+    <meta
+      name="description"
+      content="Специальные гигиенические средства для обработки вымени и ухода за копытами КРС и МРС. Заказать товар можно непосредственно на сайте заполнив форму предварительного заказа либо заказав обратный звонок."
+    />
   </head>
 
   <body>
@@ -48,13 +52,13 @@
             <div class="catalogue__goods" style="visibility: hidden;">
               <div
                 class="goods-item flex"
-                v-for="(product, id) in productsData"
-                :key="id"
-                @click="showProductModal(id)"
+                v-for="(product) in productsData"
+                :key="product.id"
+                @click="showProductModal(product.id)"
               >
                 <img
                   class="goods-item__img"
-                  :src="`./img/products/${id}-1.jpg`"
+                  :src="`./img/products/${product.id}-1.jpg`"
                   alt="Единица товара"
                 />
                 <div class="goods-item__info">
@@ -351,6 +355,7 @@
                     Предварительный заказ
                   </a>
                   <a
+                    v-if="activeProduct.pdf"
                     class="download tac"
                     :href="`/pdf/${activeProduct.pdf}.pdf`"
                     target="_blank"
@@ -368,7 +373,7 @@
                 :class="{active: activeTab === 0}"
                 @click="selectTab(0)"
               >
-                Компоненты
+                Показатели
               </p>
               <p
                 class="modal-window__menu-item"
