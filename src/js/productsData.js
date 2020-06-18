@@ -89,7 +89,7 @@ const productsData = [
     ],
   },
   {
-    id: 6,
+    id: 9,
     title: 'DERMALACTIS Hgs Сlassic',
     pdf: 'DERMALACTIS HGS Classic',
     desc:
@@ -454,7 +454,7 @@ const productsData = [
     ],
   },
   {
-    id: 9,
+    id: 6,
     title: 'DERMALACTIS Iodine Dip',
     pdf: 'DERMALACTIS IODINE DIP',
     isHot: true,
