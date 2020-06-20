@@ -266,6 +266,7 @@ const productsData = [
   {
     id: 16,
     title: 'DERMALACTIS Milk Acid Classic',
+    pdf: 'Milk_acid_Classic',
     desc:
       'Готовое гигиеническое средство для обработки сосков вымени перед доением с обеззараживающим эффектом на основе молочной кислоты.',
     longDesc:
@@ -319,6 +320,7 @@ const productsData = [
   {
     id: 17,
     title: 'DERMALACTIS Milk Acid DIP',
+    pdf: 'Milk_acid_DIP',
     desc:
       'Готовое гигиеническое средство для обработки сосков вымени после доения с обеззараживающим эффектом на основе молочной кислоты.',
     longDesc:
