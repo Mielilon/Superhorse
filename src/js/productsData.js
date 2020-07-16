@@ -692,6 +692,7 @@ const productsData = [
     box: 1,
     group: 2,
     contactOnly: true,
+    isHot: true,
     options: [
       {
         id: 1,
