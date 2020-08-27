@@ -24,6 +24,12 @@
       margin-right: 12px;
       object-position: center;
       border-radius: 12px;
+
+      &--squared {
+        width: 130px;
+        margin-left: 20px;
+        margin-right: 22px;
+      }
     }
 
     &__change {
@@ -69,6 +75,12 @@
         width: 110px;
         height: 110px;
         margin-right: 10px;
+
+        &--squared {
+          width: 90px;
+          margin-left: 10px;
+          margin-right: 20px;
+        }
       }
       &__head {
         font-weight: normal;
@@ -102,6 +114,12 @@
         width: 150px;
         height: 150px;
         margin-right: 14px;
+
+        &--squared {
+          width: 120px;
+          margin-left: 16px;
+          margin-right: 28px;
+        }
       }
       &__head {
         font-size: 20px;
@@ -202,9 +220,9 @@
   &__img {
     width: 150px;
     object-fit: cover;
-    margin-right: 12px;
+    margin-right: 32px;
     object-position: center;
-    height: 220px;
+    height: 212px;
     border-radius: 12px;
   }
   &__head {

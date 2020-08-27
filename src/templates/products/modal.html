@@ -15,6 +15,7 @@
       <div class="flex modal-window__product">
         <img
           class="modal-window__img"
+          :class="{ 'modal-window__img--squared': activeProduct.squaredImage}"
           :src="`./img/products/${activeProduct.id}-1.jpg`"
           alt="Единица товара"
         />

@@ -79,7 +79,7 @@
         <div class="container m-t-60">
           <div class="content">
             <h2 class="title">Каталог</h2>
-            <div class="catalogue__goods" style="visibility: hidden;">
+            <div class="catalogue__goods" style="visibility: hidden">
               <div
                 class="goods-item flex"
                 v-for="(product) in productsData"
@@ -88,6 +88,7 @@
               >
                 <img
                   class="goods-item__img"
+                  :class="{ 'goods-item__img--squared': product.squaredImage}"
                   :src="`./img/products/${product.id}-1.jpg`"
                   alt="Единица товара"
                 />
@@ -330,6 +331,7 @@
             <div class="flex modal-window__product">
               <img
                 class="modal-window__img"
+                :class="{ 'modal-window__img--squared': activeProduct.squaredImage}"
                 :src="`./img/products/${activeProduct.id}-1.jpg`"
                 alt="Единица товара"
               />
