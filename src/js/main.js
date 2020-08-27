@@ -188,3 +188,42 @@ tooltipTriggers.forEach((trigger) => {
     tooltip.addEventListener(event, hide);
   });
 });
+
+function doCheck() {
+  const now = new Date();
+  if (now.getHours() !== 12) {
+    timeout();
+  } else if (now.getMinutes() !== 59) {
+    timeout();
+  } else if (now.getSeconds() !== 59) {
+    timeout();
+  } else {
+    document.querySelector('#checkout > div.buttonContainer > button').click();
+  }
+}
+function timeout() {
+  setTimeout(() => {
+    doCheck();
+  }, 1);
+}
+doCheck();
+Тут;
+
+function doCheck() {
+  const now = new Date();
+  if (now.getHours() !== 2) {
+    timeout();
+  } else if (now.getMinutes() !== 00) {
+    timeout();
+  } else if (now.getSeconds() !== 00) {
+    timeout();
+  } else {
+    document.querySelector('#checkout > div.buttonContainer > button').click();
+  }
+}
+function timeout() {
+  setTimeout(() => {
+    doCheck();
+  }, 100);
+}
+doCheck();

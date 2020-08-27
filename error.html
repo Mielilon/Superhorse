@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ошибка</title>
+    <style>
+      html,
+      body {
+        background-color: #f2f2f2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Open Sans', sans-serif;
+        min-height: 100vh;
+      }
+
+      .modal {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 32px;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.04);
+      }
+
+      .modal__code {
+        text-align: center;
+        color: #e2e2e2;
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 1;
+      }
+
+      .modal__title {
+        font-size: 32px;
+        text-align: center;
+        font-weight: 600;
+        margin-top: 20px;
+      }
+
+      .modal__text {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 8px;
+        color: #909090;
+      }
+
+      .modal__actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 28px;
+      }
+
+      .button {
+        background-color: #00a121;
+        border-radius: 4px;
+        padding: 10px 32px;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+        text-decoration: none;
+      }
+
+      .button:hover {
+        background-color: #04831e;
+      }
+
+      .button:active {
+        background-color: #046e19;
+      }
+
+      .button:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal__code">404</div>
+      <div class="modal__title">Страница не найдена</div>
+      <div class="modal__text">Хотите вернуться назад?</div>
+      <div class="modal__actions">
+        <a href="#" onclick="history.go(-1);return false;" class="button"
+          >Назад</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

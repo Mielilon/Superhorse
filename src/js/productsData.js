@@ -688,7 +688,7 @@ const productsData = [
     pdf: 'CRISTALDRY Active Alkali',
     desc: 'Щелочное моющее и дезинфицирующее средство с активным хлором',
     longDesc: 'Щелочное моющее и дезинфицирующее средство с активным хлором',
-    price: 1800,
+    price: 1850,
     box: 1,
     group: 2,
     contactOnly: true,

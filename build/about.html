@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Protect&Feed – Коротко о продукции</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <meta
+      name="description"
+      content="Специальные гигиенические средства для обработки вымени и ухода за копытами КРС и МРС. Заказать товар можно непосредственно на сайте заполнив форму предварительного заказа либо заказав обратный звонок."
+    />
+  </head>
+
+  <body>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+      ym(64989217, 'init', {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/64989217"
+          style="position: absolute; left: -9999px;"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <div id="app">
+      <div class="article">
+        <div class="container">
+          <div class="content">
+            <h1>Коротко о продукции</h1>
+            <h5>Администрация Protect&Feed</h5>
+            <p>Уважаемые друзья!</p>
+            <p>
+              На данном ресурсе мы предлагаем эффективные средства для гигиены вымени
+              крс и мрс (предупреждение и профилактика маститов, папиломатозов),
+              профилактики заболевания копыт, промывки и дезинфекции доильного
+              оборудования; предлагаем следующие средства:
+            </p>
+            <ul>
+              <li>
+                Doctorhoof Concentrate функциональное средство для копытных ванн:
+                эффективно очищает и дезинфицирует раны подошвы, мякиша, меж копытной
+                щели, венчика копыта. ускоряет регенерацию повреждённых участков и
+                заживляемость мелких ран. способствует быстрой грануляции ран.
+                уплотняет роговую структуру копыта. является комплексной профилактикой
+                заболевания копыт.
+              </li>
+              <li>Cristaldry Active Acid кислотное моющее средство;</li>
+              <li>
+                Cristaldry Active Alkali щелочное моющее средство с дезинфицирующим
+                эффектом: предназначено для очистки и дезинфекции оборудования
+                (молокопроводов, доильных аппаратов, баков, танков-охладителей,
+                инвентаря) от белковых, жировых и комбинированных органических
+                загрязнений. раствор может быть использован при ручной и машинной
+                мойке полов в помещениях.
+              </li>
+              <li>
+                Cristaldry Universal Active Alkali пенное щелочное средство с
+                дезинфицирующим эффектом;
+              </li>
+              <li>
+                Dermalactis Hgs Classic готовое средство для обработки сосков вымени
+                перед доением на основе хлоргексидина
+              </li>
+              <li>
+                Dermalactis Hgs Dip специальное гигиеническое средство для обработки
+                сосков вымени после доения на основе хлоргексидина: средство обладает
+                ранозаживляющими, смягчающим свойствами, не оказывает раздражающего
+                воздействия, обеспечивает защиту от патогенных микроорганизмов и
+                проникновение болезнетворных бактерий в сосковый канал. образует
+                защитную плёнку. используется для профилактики заболеваний маститом и
+                папиломатозом.
+              </li>
+              <li>
+                Dermalactis Iodine Classic готовое средство для обработки сосков
+                вымени перед доением на основе йода
+              </li>
+              <li>
+                Dermalactis Iodine Dip специальное гигиеническое средство для
+                обработки сосков вымени после доения на основе активного йода
+              </li>
+              <li>
+                Dermalactis Lactic Acid - Automatic универсальное средство для
+                обработки сосков вымени до и после доения на основе молочной кислоты.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="footer">
+        <div class="container static">
+          <div class="content">
+            <div class="flex col">
+              <a href="/index.html"
+                ><img class="footer__logo" src="./img/Logo.png" alt="Логотип"
+              /></a>
+              <div class="footer__dealers">
+                <h4 class="dealers__header" id="dealers">Дилеры</h4>
+                <div class="dealers__wrapper flex">
+                  <div v-for="region in regionsList">
+                    <a
+                      class="grey-text link tooltip-trigger"
+                      aria-describedby="tooltip"
+                      id="button"
+                      v-text="region.region"
+                    >
+                      Южный округ</a
+                    >
+                    <div id="tooltip" class="tooltip" role="tooltip">
+                      <span v-text="region.name">Евгений</span>
+                      <a :href="`tel:${region.phone}`" v-text="region.phone"
+                        >8 (905) 472-33-30</a
+                      >
+                      <div class="arrow" data-popper-arrow></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__info flex">
+              <a class="grey-text no-m" href="/about.html">Коротко о продукции</a>
+              <p class="date">Gigiena © <span v-text="getCurrentYear">2020</span></p>
+              <a class="grey-text no-m" href="/policy.html">Политика компании</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

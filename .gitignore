@@ -11,7 +11,7 @@ pids
 *.seed
 *.pid.lock
 
-build/
+# build/
 
 *.lock
 
