@@ -146,6 +146,13 @@
         width: 100px;
         height: 120px;
         margin-right: 14px;
+
+        &--squared {
+          width: 100px;
+          height: 120px;
+          margin-right: 14px;
+          margin-left: 0;
+        }
       }
     }
   }

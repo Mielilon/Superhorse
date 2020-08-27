@@ -841,6 +841,7 @@ const productsData = [
     title: 'DERMALACTIS PGD Concentrate',
     pdf: 'DERMALACTIS_PGD_Concentrate',
     unit: 'кг.',
+    isHot: true,
     desc:
       'Гигиеническое средство для обработки сосков вымени перед доением за счет действия полигуанидина гидрохлорида',
     longDesc:
